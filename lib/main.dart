@@ -19,14 +19,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String personal_access_token = myToken().token;
+  String personalAccessToken = MyToken().token;
 
   @override
   Widget build(BuildContext context) {
     final HttpLink httpLink = HttpLink(
         uri: 'https://api.github.com/graphql',
       headers: {
-          "authorization": "Bearer $personal_access_token"
+          "authorization": "Bearer $personalAccessToken"
       }
     );
 
